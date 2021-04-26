@@ -20,7 +20,7 @@
         else {
             if (strpos($mail, '@') && strpos($mail, '.'))
             {
-                if (strlen($name) > 3){
+                if (strlen($name) >= 3){
                     if (is_numeric($age)) {
                         $ok = true;
                         $string = 'Hai inserito tutti i dati richiesti!';
@@ -29,7 +29,7 @@
                         $string = 'L\'età inserita non è corretta!';
                     }
                 } else {
-                    $string = 'Non puoi chimarti aa!!!';
+                    $string = 'Non puoi chimarti '.$name.'!!! Inserisci un nome più lungo.';
                 }
             }
             else 
